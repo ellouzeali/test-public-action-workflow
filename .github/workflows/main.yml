@@ -9,7 +9,7 @@ jobs:
       uses: /actions/checkout@v2
     - name: Use our custom action step
       id: mytest
-      uses: /ellouzeali/test-custom-action-repo@v1.0.0
+      uses: /ellouzeali/test-public-custom-action-repo@v1
       with:
         source-code-path: ./
     # Use the output
