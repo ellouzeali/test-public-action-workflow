@@ -7,3 +7,15 @@ jobs:
     steps:
     - name: checkout
       uses: /actions/checkout@v2
+    - name: Use our custom action step
+      id: mytest
+      uses: /ellouzeali/test-custom-action-repo@v1.0.0
+      with:
+        source-code-path: ./
+    # Use the output
+    - name: Get the output Username
+      run: echo "The was ${{ steps.mytest.outputs.user-name }}"
+    - name: Get the output Test File
+      run: echo "The time was ${{ steps.mytest.outputs.test-file }}"
+    - name: Get the output Content File
+      run: echo "The time was ${{ steps.mytest.outputs.content-file }}"
