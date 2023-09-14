@@ -1,0 +1,9 @@
+on: [push]
+name: Test Workflow
+jobs:
+  build_job:
+    runs-on: ubuntu-latest
+    name: A job to test build with our custom action
+    steps:
+    - name: checkout
+      uses: /actions/checkout@v2
